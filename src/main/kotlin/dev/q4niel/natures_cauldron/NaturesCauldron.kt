@@ -6,10 +6,9 @@ import org.slf4j.LoggerFactory
 
 object NaturesCauldron: ModInitializer {
 	fun print(value: String): Unit = _logger.info(value);
-
     private val _logger: Logger = LoggerFactory.getLogger("natures_cauldron");
 
-	override fun onInitialize() {
-		print("Hello Fabric world!");
-	}
+	val serverConfig: ServerConfigFile = configInterpreter<ServerConfigFile>("config/natures_cauldron.json") ?: ServerConfigFile();
+
+	override fun onInitialize() {}
 }
