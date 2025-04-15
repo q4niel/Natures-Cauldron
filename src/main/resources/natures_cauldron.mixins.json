@@ -1,13 +1,8 @@
 {
 	"required": true,
-	"package": "q4niel.natures_cauldron.mixin",
+	"package": "dev.q4niel.natures_cauldron.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ItemsMixin",
-		"BrewingRecipeRegistryMixin",
-		"BrewingStandBlockEntityMixin",
-		"BrewingStandScreenHandlerMixin"
-	],
+	"mixins": [],
 	"injectors": {
 		"defaultRequire": 1
 	}
