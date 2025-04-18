@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "s": "#minecraft:stone_crafting_materials",
-    "c": "minecraft:copper_ingot"
+    "s": {
+      "tag": "minecraft:stone_crafting_materials"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    }
   },
   "pattern": [
     " c ",
