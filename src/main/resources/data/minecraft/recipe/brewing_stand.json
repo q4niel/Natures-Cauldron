@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": "#minecraft:stone_crafting_materials",
+    "c": "minecraft:copper_ingot"
+  },
+  "pattern": [
+    " c ",
+    "sss"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:brewing_stand"
+  }
+}
