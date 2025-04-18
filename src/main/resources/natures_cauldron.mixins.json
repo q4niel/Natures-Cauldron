@@ -3,6 +3,7 @@
 	"package": "dev.q4niel.natures_cauldron.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"BrewingRecipeRegistryMixin",
 		"ItemsMixin",
 		"ItemStackMixin"
 	],

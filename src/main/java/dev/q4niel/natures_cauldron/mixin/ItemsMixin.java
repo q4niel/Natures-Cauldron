@@ -1,5 +1,6 @@
 package dev.q4niel.natures_cauldron.mixin;
 
+import dev.q4niel.natures_cauldron.StaticConfig;
 import dev.q4niel.natures_cauldron.NaturesCauldron;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -47,22 +48,22 @@ public class ItemsMixin {
     private static Args register(Args args) {
         switch (((RegistryKey)args.get(0)).getValue().toTranslationKey().toString()) {
             case "minecraft.glass_bottle": {
-                args.set(2, maxCount(args.get(2), NaturesCauldron.INSTANCE.getServerConfig().getGlassBottleMaxCount()));
+                args.set(2, maxCount(args.get(2), StaticConfig.GLASS_BOTTLE_MAX_COUNT));
                 break;
             }
 
             case "minecraft.potion": {
-                args.set(2, maxCount(args.get(2), NaturesCauldron.INSTANCE.getServerConfig().getPotionMaxCount()));
+                args.set(2, maxCount(args.get(2), StaticConfig.POTION_MAX_COUNT));
                 break;
             }
 
             case "minecraft.splash_potion": {
-                args.set(2, maxCount(args.get(2), NaturesCauldron.INSTANCE.getServerConfig().getSplashPotionMaxCount()));
+                args.set(2, maxCount(args.get(2), StaticConfig.SPLASH_POTION_MAX_COUNT));
                 break;
             }
 
             case "minecraft.lingering_potion": {
-                args.set(2, maxCount(args.get(2), NaturesCauldron.INSTANCE.getServerConfig().getLingeringPotionMaxCount()));
+                args.set(2, maxCount(args.get(2), StaticConfig.LINGERING_POTION_MAX_COUNT));
                 break;
             }
         }
