@@ -21,12 +21,6 @@
 				"adapter": "kotlin"
 			}
 		],
-		"client": [
-			{
-				"value": "dev.q4niel.NaturesCauldronClient",
-				"adapter": "kotlin"
-			}
-		],
 		"fabric-datagen": [
 			{
 				"value": "dev.q4niel.NaturesCauldronDataGenerator",
@@ -35,11 +29,7 @@
 		]
 	},
 	"mixins": [
-		"natures_cauldron.mixins.json",
-		{
-			"config": "natures_cauldron.client.mixins.json",
-			"environment": "client"
-		}
+		"natures_cauldron.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.17.3",
