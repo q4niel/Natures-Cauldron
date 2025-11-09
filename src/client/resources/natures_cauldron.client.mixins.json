@@ -1,12 +1,11 @@
 {
 	"required": true,
-	"package": "dev.q4niel.mixin",
+	"package": "dev.q4niel.mixin.client",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
+	"client": [
+		"ExampleClientMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
 	}
 }

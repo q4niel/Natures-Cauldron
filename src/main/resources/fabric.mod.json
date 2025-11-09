@@ -2,38 +2,51 @@
 	"schemaVersion": 1,
 	"id": "natures_cauldron",
 	"version": "${version}",
-	"name": "Nature's Cauldron",
-	"description": "Revamps brewing mechanics with... flowers?",
-	"authors": [
-		"q4niel"
-	],
-	"contributors": [
-		"Max Westerlund - Art Assets"
-	],
+	"name": "Natures Cauldron",
+	"description": "Revamping potion brewing with flowers",
+	"authors": ["q4niel"],
+    "contributors": ["MaxWesterlund (Art Assets)"],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/natures-cauldron",
-		"issues": "https://github.com/q4niel/Natures-Cauldron/issues",
-		"sources": "https://github.com/q4niel/Natures-Cauldron"
+		"sources": "https://github.com/q4niel/Natures-Cauldron",
+        "issues": "https://github.com/q4niel/Natures-Cauldron/issues"
 	},
-	"license": "The Insight License II",
+	"license": "Natures Cauldron License",
 	"icon": "assets/natures_cauldron/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"q4niel.natures_cauldron.NaturesCauldron"
+			{
+				"value": "dev.q4niel.NaturesCauldron",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "dev.q4niel.NaturesCauldronClient",
+				"adapter": "kotlin"
+			}
 		],
 		"fabric-datagen": [
-			"q4niel.natures_cauldron.NaturesCauldronDataGenerator"
+			{
+				"value": "dev.q4niel.NaturesCauldronDataGenerator",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"mixins": [
-		"natures_cauldron.mixins.json"
+		"natures_cauldron.mixins.json",
+		{
+			"config": "natures_cauldron.client.mixins.json",
+			"environment": "client"
+		}
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21",
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.10",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
 	},
 	"suggests": {
 		"another-mod": "*"
